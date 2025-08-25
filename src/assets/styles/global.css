@@ -1,0 +1,11 @@
+body {
+    background-image: url('../img/7f6077d0662426bcc8ebfadd58af83d6.jpg');
+/* я специально это закомментила для пущей кринжовости
+    background-size: cover; */
+
+}
+.container {
+  margin-inline-start: 45px;
+  margin-inline-end: 45px;
+  margin-block-start: 40px;
+}

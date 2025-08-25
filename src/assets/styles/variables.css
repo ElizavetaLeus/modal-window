@@ -1,0 +1,16 @@
+body {
+    /* Шрифты */
+    --font-family-primary: 'Caveat', sans-serif;
+    --font-family-secondary: 'Marck Script', sans-serif;
+    /* базовые цвета */
+    --color-white-base: 255, 255, 255;
+    --color-gray-base: 197, 198, 200;
+    --color-dark-gray-base: 131, 148, 167;
+    --color-black-base: 0, 0, 0;
+    /* цвета */
+    --color-white: rgb(var(--color-white-base));
+    --color-gray: rgb(var(--color-gray-base));
+    --color-dark-gray: rgb(var(--color-dark-gray-base));
+    --color-black: rgb(var(--color-black-base));
+    /* цвета с прозрачностью */
+}
