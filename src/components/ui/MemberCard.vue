@@ -1,13 +1,13 @@
 <template>
   <div :class="$style.memberCard">
     <img :src="image" :class="$style.image">
-    <div>{{ user.text }}</div>
+    <div>{{ member.text }}</div>
   </div>
 </template>
 
 <script setup lang="ts">
 interface Props {
-  user: {id: number, img: object, text: string}
+  member: {id: number, img: object, text: string}
   image: string;
 }
 

@@ -11,10 +11,10 @@
         text="100% шанс стать ее чаги~а"
       />
       <MemberCard 
-        v-for="user in Userlist"
-        :key="user.id"
-        :image="user.img.href"
-        :user="user"
+        v-for="member in Memberlist"
+        :key="member.id"
+        :image="member.img.href"
+        :member="member"
       />
     </div>
   </div>
@@ -25,7 +25,7 @@ import AppTitle from '@/components/AppTitle.vue';
 import AppButton from '@/components/ui/AppButton.vue';
 import MemberCard from '@/components/ui/MemberCard.vue';
 
-const Userlist = [
+const Memberlist = [
   {id: 1, img: new URL("@/assets/img/leeminho.jpg", import.meta.url), text: 'ляляля'},
   {id: 2, img: new URL("@/assets/img/kimseungmin.jpg", import.meta.url), text: 'ляляля'},
 ];
