@@ -3,14 +3,18 @@
     <img :src="image" :class="$style.image">
     <div :class="$style.cardText">
       <div :class="$style.cardTextTitle">{{ member.name }}</div>
-      <div :class="$style.cardTextSubtitle">{{ member.text }}</div>
+      <ul :class="$style.cardTextSubtitle">
+        <li>{{ member.point1 }}</li>
+        <li>{{ member.point2 }}</li>
+        <li>{{ member.point3 }}</li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 interface Props {
-  member: {id: number, img: string, text: string, name: string}
+  member: {id: number, img: string, point1: string, point2: string, point3: string, name: string}
   image: string;
 }
 
