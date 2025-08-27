@@ -3,13 +3,42 @@
     <AppTitle 
       text="Как покорить юную кейпопессу?"
     />
+    <div :class="$style.buttonList">
+      <AppButton 
+        text="50% шанс стать ее чаги~а"
+      />
+      <AppButton 
+        text="100% шанс стать ее чаги~а"
+      />
+      <MemberCard 
+        v-for="user in Userlist"
+        :key="user.id"
+        :image="user.img.href"
+        :user="user"
+      />
+    </div>
   </div>
 </template>
 
-<script setup lang="ts">
-import AppTitle from './components/AppTitle.vue';
+<script setup >
+import AppTitle from '@/components/AppTitle.vue';
+import AppButton from '@/components/ui/AppButton.vue';
+import MemberCard from '@/components/ui/MemberCard.vue';
+
+const Userlist = [
+  {id: 1, img: new URL("@/assets/img/leeminho.jpg", import.meta.url), text: 'ляляля'},
+  {id: 2, img: new URL("@/assets/img/kimseungmin.jpg", import.meta.url), text: 'ляляля'},
+];
+const aaa =new URL("@/assets/img/kimseungmin.jpg", import.meta.url);
+console.log(aaa);
+
 </script>
 
 <style module>
-
+.buttonList {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  margin-top: 20px;
+}
 </style>
