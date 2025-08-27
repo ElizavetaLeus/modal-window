@@ -5,7 +5,7 @@ body {
     /* базовые цвета */
     --color-white-base: 255, 255, 255;
     --color-gray-base: 197, 198, 200;
-    --color-dark-gray-base: 131, 148, 167;
+    --color-dark-gray-base: 86, 87, 88;
     --color-black-base: 0, 0, 0;
     /* цвета */
     --color-white: rgb(var(--color-white-base));
