@@ -11,7 +11,9 @@
       <AppButton 
         text="100% шанс стать ее чаги~а"
       />
-      <AppModal :isOpen="isOpenModal" />
+      <AppModal 
+        :isOpen="isOpenModal"
+        @close="closeModal()" />
       <!-- <MemberCard 
         v-for="member in Memberlist"
         :key="member.id"
@@ -49,8 +51,9 @@ const isOpenModal = ref(false);
 
 const openModal = () => {
   isOpenModal.value = true;
-  console.log(isOpenModal.value);
-  
+};
+const closeModal = () => {
+  isOpenModal.value = false;
 }
 
 </script>
