@@ -3,7 +3,7 @@
     <div :class="$style.modalWrapper">
       <header :class="$style.modalHeader">
         <div>Заголовок</div>
-        <button>X</button>
+        <button @click="closeModal()">X</button>
       </header>
       <div></div>
     </div>
@@ -14,8 +14,16 @@
 interface Props {
   isOpen: boolean;
 }
+interface Emits {
+  (event: 'close'): void;
+}
 
 defineProps<Props>();
+const emits = defineEmits<Emits>();
+
+const closeModal = () => {
+  emits('close');
+}
 </script>
 
 <style module>
@@ -28,6 +36,8 @@ defineProps<Props>();
   justify-content: center;
   opacity: 0;
   visibility: hidden;
+  width: 100%;
+  height: 100%;
 }
 .modalOpen {
   opacity: 1;
@@ -49,5 +59,6 @@ defineProps<Props>();
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
 }
 </style>
