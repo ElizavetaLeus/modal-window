@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 interface Props {
-  member: {id: number, img: object, text: string, name: string}
+  member: {id: number, img: string, text: string, name: string}
   image: string;
 }
 
