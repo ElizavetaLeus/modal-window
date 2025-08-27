@@ -1,13 +1,16 @@
 <template>
   <div :class="$style.memberCard">
     <img :src="image" :class="$style.image">
-    <div>{{ member.text }}</div>
+    <div :class="$style.cardText">
+      <div :class="$style.cardTextTitle">{{ member.name }}</div>
+      <div :class="$style.cardTextSubtitle">{{ member.text }}</div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 interface Props {
-  member: {id: number, img: object, text: string}
+  member: {id: number, img: object, text: string, name: string}
   image: string;
 }
 
@@ -27,5 +30,19 @@ defineProps<Props>();
   border-radius: 50%;
   max-width: 50px;
   min-height: 50%;
+}
+.cardText {
+  display: block;
+  gap: 5px;
+}
+.cardTextTitle {
+  font-family: var(--font-family-primary);
+  font-size: 28px;
+  color: var(--color-black);
+}
+.cardTextSubtitle {
+  font-family: var(--font-family-secondary);
+  font-size: 20px;
+  color: var(--color-dark-gray);
 }
 </style>
