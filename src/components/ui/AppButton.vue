@@ -1,5 +1,7 @@
 <template>
-  <button :class="$style.button"> {{ text }}</button>
+  <button 
+    :class="$style.button"
+    @click="emitListener()"> {{ text }}</button>
 </template>
 
 <script setup lang="ts">
@@ -11,7 +13,10 @@ interface Emits {
 }
 
 defineProps<Props>();
-defineEmits<Emits>();
+const emits = defineEmits<Emits>();
+const emitListener = () => {
+  emits('click');
+}
 </script>
 
 <style module>
