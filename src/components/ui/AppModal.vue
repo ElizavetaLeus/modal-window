@@ -2,10 +2,14 @@
   <div :class="[$style.modal, isOpen && $style.modalOpen]">
     <div :class="$style.modalWrapper">
       <header :class="$style.modalHeader">
-        <div>Заголовок</div>
+        <slot name="title">
+          <div :class="$style.title">{{ title }}</div>
+        </slot>
         <button @click="closeModal()">X</button>
       </header>
-      <div></div>
+      <div>
+        <slot name="content">content</slot>
+      </div>
     </div>
   </div>
 </template>
@@ -13,6 +17,7 @@
 <script setup lang="ts">
 interface Props {
   isOpen: boolean;
+  title: string;
 }
 interface Emits {
   (event: 'close'): void;
@@ -60,5 +65,10 @@ const closeModal = () => {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+}
+.title {
+  font-family: var(--font-family-primary);
+  font-size: 30px;
+  color: var(--color-black);
 }
 </style>
