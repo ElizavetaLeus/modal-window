@@ -18,5 +18,6 @@ defineProps<Props>();
   padding: 10px;
   background-color: var(--color-white);
   border-radius: 10px;
+  opacity: 90%;
 }
 </style>
