@@ -33,8 +33,6 @@ const Memberlist = [
   {id: 5, img: new URL("@/assets/img/HwangHyunjin.jpg", import.meta.url), text: 'ляляля', name:'Хван Хенджин'},
   {id: 6, img: new URL("@/assets/img/SeoChang-bin.jpg", import.meta.url), text: 'ляляля', name:'Со Чанбин'},
 ];
-const aaa =new URL("@/assets/img/kimseungmin.jpg", import.meta.url);
-console.log(aaa);
 
 </script>
 
