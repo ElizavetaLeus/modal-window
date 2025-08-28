@@ -6,7 +6,7 @@
     <div :class="$style.buttonList">
       <AppButton 
         text="50% шанс стать ее чаги~а"
-
+        @click="openModalContent()"
       />
       <AppButton 
         text="100% шанс стать ее чаги~а"
@@ -28,7 +28,15 @@
           </div>
         </template>
       </AppModal>
-
+      <AppModal
+        :isOpen="isOpenModalContent"
+        @close="closeModalContent()"
+        title="Краткая инструкция по общению с юной фанаткой Stray Kids"
+      >
+        <template v-slot:content>
+          <ModalContent />
+        </template>
+      </AppModal>
 
     </div>
   </div>
@@ -41,14 +49,22 @@ import MemberCard from '@/components/ui/MemberCard.vue';
 import { ref } from 'vue';
 import AppModal from '@/components/ui/AppModal.vue';
 import Memberlist from '@/components/data/MemberList';
+import ModalContent from './components/ModalContent.vue';
 
 const isOpenModalMembers = ref(false);
+const isOpenModalContent = ref(false);
 
 const openModalMembers = () => {
   isOpenModalMembers.value = true;
 };
+const openModalContent = () => {
+  isOpenModalContent.value = true;
+};
 const closeModalMembers = () => {
   isOpenModalMembers.value = false;
+};
+const closeModalContent = () => {
+  isOpenModalContent.value = false;
 }
 
 </script>
