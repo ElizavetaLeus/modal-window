@@ -20,9 +20,8 @@
         <template v-slot:content>
           <div :class="$style.cardList">
             <MemberCard 
-              v-for="member in Memberlist"
+              v-for="member in memberlist"
               :key="member.id"
-              :image="member.img"
               :member="member"
             />
           </div>
@@ -47,7 +46,7 @@ import AppTitle from '@/components/AppTitle.vue';
 import AppButton from '@/components/ui/AppButton.vue';
 import MemberCard from '@/components/ui/MemberCard.vue';
 import AppModal from '@/components/ui/AppModal.vue';
-import Memberlist from '@/components/data/MemberList';
+import { memberlist } from '@/components/data/MemberList';
 import ModalContent from './components/ModalContent.vue';
 import createTogler from '@/utils/createTogler';
 
