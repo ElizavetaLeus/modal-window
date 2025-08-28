@@ -1,10 +1,11 @@
 <template>
-  <div :class="[$style.modal, isOpen && $style.modalOpen]">
-    <div :class="$style.modalWrapper">
+  <div 
+    :class="[$style.modal, isOpen && $style.modalOpen]"
+    @click="closeModal()"
+  >
+    <div :class="$style.modalWrapper" @click.stop>
       <header :class="$style.modalHeader">
-        <slot name="title">
-          <div :class="$style.title">{{ title }}</div>
-        </slot>
+        <div :class="$style.title">{{ title }}</div>
         <button @click="closeModal()">X</button>
       </header>
       <div>
@@ -34,9 +35,8 @@ const closeModal = () => {
 <style module>
 .modal {
   position: absolute;
-  top: 100px;
-  left: 100px;
   display: flex;
+  gap: 20px;
   align-items: center;
   justify-content: center;
   opacity: 0;
@@ -49,7 +49,9 @@ const closeModal = () => {
   visibility: visible;
 }
 .modalWrapper {
-  max-width: 60%;
+  position: absolute;
+  top: 70px;
+  max-width: 90%;
   background-color: var(--color-white);
   padding: 20px;
   border-radius: 10px;
@@ -64,11 +66,11 @@ const closeModal = () => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 10px;
+  gap: 20px;
 }
 .title {
   font-family: var(--font-family-primary);
-  font-size: 30px;
+  font-size: 36px;
   color: var(--color-black);
 }
 </style>
