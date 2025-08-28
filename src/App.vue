@@ -66,5 +66,6 @@ const [isOpenModalContent, openModalContent, closeModalContent] = createTogler()
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+  margin-top: 10px;
 }
 </style>
