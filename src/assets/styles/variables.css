@@ -7,10 +7,14 @@ body {
     --color-gray-base: 197, 198, 200;
     --color-dark-gray-base: 86, 87, 88;
     --color-black-base: 0, 0, 0;
+    --color-red-base: 255, 0, 0;
+    --color-green-base: 76, 187, 23;
     /* цвета */
     --color-white: rgb(var(--color-white-base));
     --color-gray: rgb(var(--color-gray-base));
     --color-dark-gray: rgb(var(--color-dark-gray-base));
     --color-black: rgb(var(--color-black-base));
+    --color-red: rgb(var(--color-red-base));
+    --color-green: rgb(var(--color-green-base));
     /* цвета с прозрачностью */
 }
