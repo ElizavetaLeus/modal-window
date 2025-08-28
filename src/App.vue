@@ -46,27 +46,14 @@
 import AppTitle from '@/components/AppTitle.vue';
 import AppButton from '@/components/ui/AppButton.vue';
 import MemberCard from '@/components/ui/MemberCard.vue';
-import { ref } from 'vue';
 import AppModal from '@/components/ui/AppModal.vue';
 import Memberlist from '@/components/data/MemberList';
 import ModalContent from './components/ModalContent.vue';
+import createTogler from '@/utils/createTogler';
 
-const isOpenModalMembers = ref(false);
-const isOpenModalContent = ref(false);
 
-const openModalMembers = () => {
-  isOpenModalMembers.value = true;
-};
-const openModalContent = () => {
-  isOpenModalContent.value = true;
-};
-const closeModalMembers = () => {
-  isOpenModalMembers.value = false;
-};
-const closeModalContent = () => {
-  isOpenModalContent.value = false;
-}
-
+const [isOpenModalMembers, openModalMembers, closeModalMembers] = createTogler();
+const [isOpenModalContent, openModalContent, closeModalContent] = createTogler();
 </script>
 
 <style module>
