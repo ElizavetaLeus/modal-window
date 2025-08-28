@@ -14,6 +14,7 @@ interface Emits {
 
 defineProps<Props>();
 const emits = defineEmits<Emits>();
+
 const emitListener = () => {
   emits('click');
 }
