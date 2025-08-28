@@ -6,7 +6,10 @@
     <div :class="$style.modalWrapper" @click.stop>
       <header :class="$style.modalHeader">
         <div :class="$style.title">{{ title }}</div>
-        <button @click="closeModal()">X</button>
+        <button 
+          :class="$style.button"
+          @click="closeModal()"
+        >X</button>
       </header>
       <div>
         <slot name="content">content</slot>
@@ -72,5 +75,14 @@ const closeModal = () => {
   font-family: var(--font-family-primary);
   font-size: 36px;
   color: var(--color-black);
+}
+.button {
+  color: var(--color-white);
+  background-color: var(--color-dark-gray);
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
 }
 </style>
