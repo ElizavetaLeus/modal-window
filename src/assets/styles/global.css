@@ -2,7 +2,7 @@ body {
     background-image: url('../img/7f6077d0662426bcc8ebfadd58af83d6.jpg');
     
 /* я специально это закомментила для пущей кринжовости */
-    background-size: cover;
+    /* background-size: cover; */
 
 }
 .container {
