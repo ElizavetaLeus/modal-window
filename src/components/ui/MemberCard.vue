@@ -1,21 +1,22 @@
 <template>
   <div :class="$style.memberCard">
-    <img :src="image" :class="$style.image">
+    <img :src="member.img" :class="$style.image">
     <div :class="$style.cardText">
       <div :class="$style.cardTextTitle">{{ member.name }}</div>
       <ul :class="$style.cardTextSubtitle">
-        <li>{{ member.point1 }}</li>
-        <li>{{ member.point2 }}</li>
-        <li>{{ member.point3 }}</li>
+        <li v-for="point in member.points"
+            :key="point"> {{ point }}
+        </li>
       </ul>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+import { Member } from '@/components/data/MemberList';
+
 interface Props {
-  member: {id: number, img: string, point1: string, point2: string, point3: string, name: string}
-  image: string;
+  member: Member
 }
 
 defineProps<Props>();
