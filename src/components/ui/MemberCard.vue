@@ -29,23 +29,27 @@ defineProps<Props>();
   justify-content: flex-start;
   padding: 5px;
   background-color: var(--color-white);
+  align-items: center;
+  border: 1px solid var(--color-gray);
+  border-radius: 10px;
 }
 .image{
   border-radius: 50%;
-  max-width: 50px;
-  min-height: 50%;
+  width: 150px;
+  height: 150px;
 }
 .cardText {
   display: block;
   gap: 5px;
+  margin-top: 10px;
 }
 .cardTextTitle {
   font-family: var(--font-family-primary);
-  font-size: 28px;
+  font-size: 30px;
   color: var(--color-black);
+  text-align: center;
 }
 .cardTextSubtitle {
-  font-family: var(--font-family-secondary);
   font-size: 20px;
   color: var(--color-dark-gray);
 }
