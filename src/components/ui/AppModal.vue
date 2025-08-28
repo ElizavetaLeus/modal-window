@@ -9,7 +9,9 @@
         <button 
           :class="$style.button"
           @click="closeModal()"
-        >X</button>
+        >
+          X
+        </button>
       </header>
       <div>
         <slot name="content">content</slot>
