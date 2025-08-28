@@ -39,9 +39,9 @@ defineProps<Props>();
   height: 150px;
 }
 .cardText {
-  display: block;
-  gap: 5px;
-  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .cardTextTitle {
   font-family: var(--font-family-primary);
@@ -52,5 +52,6 @@ defineProps<Props>();
 .cardTextSubtitle {
   font-size: 20px;
   color: var(--color-dark-gray);
+  max-width: 360px;
 }
 </style>
