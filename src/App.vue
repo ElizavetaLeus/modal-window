@@ -5,7 +5,7 @@
     />
     <div :class="$style.buttonList">
       <AppButton 
-        text="50% шанс стать ее чаги~а"
+        text="База общения с кейпопессой"
         @click="openModalContent()"
       />
       <AppButton 
